@@ -9,7 +9,11 @@ public class Hero {
 	public String toString() {
 		return this.name;
 	}
-	
-	
-
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Hero) {
+		return toString().equals(((Hero)obj).toString());
+		}
+		return false;
+	}
 }
